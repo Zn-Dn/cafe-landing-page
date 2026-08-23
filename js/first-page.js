@@ -36,3 +36,31 @@ console.log(dados)
 }
 
 CriaCard()
+
+
+function ativarMenu() {
+    const menu = document.querySelector("nav ul");
+
+    menu.classList.toggle("ativo");
+}
+
+document.querySelector(".menu").addEventListener("click", ativarMenu);
+
+ativarMenu()
+
+
+
+
+const elementosFooter = document.querySelectorAll(".btnFooter");
+
+elementosFooter.forEach(botao => {
+
+    botao.addEventListener("click", () => {
+
+        const ul = botao.querySelector("ul");
+
+        ul.classList.toggle("mostra");
+
+    });
+
+});

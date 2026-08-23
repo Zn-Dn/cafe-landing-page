@@ -1,12 +1,15 @@
 @import url(./global.css);
 
+html {
+    scroll-behavior: smooth;
+}
 
 header {
     background-image: url(../img/header/Gemini_Generated_Image_qd40czqd40czqd40.jfif);
     background-repeat: no-repeat;
-    background-position: top;
+    background-position:  top;
     background-size: cover;
-   min-height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr auto;
     padding: 30px 20px 0px 20px;
@@ -21,6 +24,10 @@ h1 {
 }
 
 nav {
+
+    .menu {
+        display: none;
+    }
 
     ul {
         display: flex;
@@ -124,7 +131,7 @@ main {
 }
 
 .Destaque-Semana {
-  min-height: 100vh;
+    min-height: 100vh;
 
     .text-destaques {
         display: flex;
@@ -136,8 +143,7 @@ main {
 
 
         h2 {
-            margin: 40px
-            0;
+            margin: 40px 0;
             color: var(--cor-texto);
             font-size: clamp(2rem, 4vw, 3.2rem);
             font-weight: 600;
@@ -148,27 +154,29 @@ main {
 
     .cards {
 
-       
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        gap: 10px;
+
 
         .card {
             background-color: #1e1e1e;
             border-radius: 10px;
             position: relative;
+            
 
             img {
                 width: 300px;
-               max-width:100%;
-               
+                max-width: 100%;
+
 
             }
         }
 
         .card-info {
             text-align: center;
+
             color: var(--cor-texto);
 
             .nota {
@@ -189,10 +197,32 @@ main {
                 }
             }
 
-            h3 {
-                font-size: 1.7rem;
-              
+            .nomepreco {
+                 display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+                margin: -20px 0 20px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
             }
+
+            h3 {
+
+                font-size: 1.7rem;
+
+            }
+
+            span {
+                color: var(--cor-azul);
+                background-color: var(--cor-texto);
+                max-width: 100%;
+                width: 100px;
+                font-weight: 600;
+            }
+
+
         }
 
     }
@@ -210,12 +240,6 @@ main {
 
 
 
-
-
-    img {
-        position: relative;
-        z-index: 1;
-    }
 
     .descricao {
         background-color: var(--cor-texto);
@@ -245,8 +269,8 @@ main {
             }
         }
 
-       
-     button {
+
+        button {
             width: 100px;
             background-color: var(--cor-sucesso);
             border: none;
@@ -256,29 +280,47 @@ main {
             color: var(--cor-texto);
             font-size: 1rem;
             font-weight: 600;
-        }}
+        }
+    }
 }
 
+.sobre img {
+    animation: xicara 5s ease-in-out infinite;
+}
+
+@keyframes xicara {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
 
 footer {
     background-color: var(--cor-fundo);
-   
-   
+
+
     display: flex;
     flex-direction: column;
-  
-  
+
+
 
 
 }
 
 .agendamento {
     min-height: 100vh;
-padding:0 30px 0 30px ;
-display: flex;
+    padding: 0 30px 0 30px;
+    display: flex;
 
-flex-direction: column;
-gap: 30px;
+    flex-direction: column;
+    gap: 30px;
 
     h2 {
         font-size: 2.6rem;
@@ -295,41 +337,42 @@ gap: 30px;
     display: flex;
     gap: 20px;
 
-    .mensagem{
+    .mensagem {
         display: flex;
-        
-.frase {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+        .frase {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
 
 
-    h3 {
-        color: var(--cor-texto);
-        font-size: 2rem;
-    }
+            h3 {
+                color: var(--cor-texto);
+                font-size: 2rem;
+            }
 
-    p {
-        font-size: 1.4rem;
-        color: var(--cor-texto);
-        
-        
-    }
-}
+            p {
+                font-size: 1.4rem;
+                color: var(--cor-texto);
 
-img{
-    position: relative;
-    left: 0;
-    bottom: -10px;
-   
-}
+
+            }
+        }
+
+        img {
+            position: relative;
+            left: 0;
+            bottom: -10px;
+            display: none;
+
+        }
     }
 }
 
 .fomulario {
-   
+
     display: flex;
-gap: 20px;
+    gap: 20px;
     flex-direction: column;
 
 
@@ -356,33 +399,38 @@ form {
 
 
     input {
-        background-color:#c47a5585 ;
+        background-color: #c47a5585;
         border: 2px solid var(--cor-texto-secundario);
-       
+
         background-color: var();
         border-radius: 13px;
         padding: 10px;
-max-width: 100%;
+        max-width: 100%;
         width: 400px;
         color: var(--cor-texto);
 
         &::placeholder {
             padding: 5px;
             font-size: 1.1rem;
-        color: var(--cor-texto); }
+            color: var(--cor-texto);
+        }
     }
 
 
-   
-} .enviar {
-        text-align: center;
-        background-color: var(--cor-destaque);
-        border: 2px solid var(--cor-marrom-claro);
-        border-radius: 13px;
-        padding: 5px;
-        color: var(--cor-texto-secundario);
-        font-weight: 700;
-    }
+
+}
+
+.enviar {
+    text-align: center;
+    background-color: var(--cor-destaque);
+    border: 2px solid var(--cor-marrom-claro);
+    border-radius: 13px;
+    padding: 5px;
+    color: var(--cor-texto-secundario);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 .mais-Detalhes {
     background-color: #111;
     padding: 35px 50px 20px;
@@ -446,8 +494,7 @@ max-width: 100%;
 
 
 /* Efeito nos links */
-.navegacao a:hover
- {
+.navegacao a:hover {
     color: var(--cor-destaque);
     padding-left: 5px;
 }
@@ -522,36 +569,176 @@ max-width: 100%;
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 768px) {
-
-/* cabeçalho */
-
- nav{
-
-    ul{
-       display: none;   
-    }
-  
- }
-
-
- .sobre{
-   flex-direction: column;
- }
+@media (max-width: 768px) {
 
 
 
- .divContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    .mensagem .frase h3{
-text-align: center;
+    header {
+        background-position: right;
+        
+        grid-template-columns: 1fr auto;
+        min-height: 100vh;
+        padding: 20px;
     }
 
-    .mensagem img{
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Ícone do menu */
+    .menu {
+        display: block;
+        position: relative;
+        z-index: 20;
+
+        color: var(--cor-texto);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    /* Menu fechado */
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        width: 70%;
+        height: 100vh;
+
+        margin: 0;
+        padding: 0;
+        transform: translateX(100%);
+        background-color: var(--cor-fundo);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+
+        list-style: none;
+
+        transition: transform .4s ease;
+
+        z-index: 10;
+    }
+
+    /* Menu aberto */
+    /* nav ul.ativo {
+        transform: translateX(0);
+    } */
+
+    nav ul li {
+        width: 80%;
+        text-align: center;
+        padding: 12px;
+
+        border-radius: 8px;
+
+        transition: .3s ease;
+    }
+
+    /* Hover dos itens */
+    nav ul li:hover {
+        background-color: var(--cor-verde);
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+
+        color: var(--cor-texto);
+        text-decoration: none;
+    }
+
+
+    nav ul li .contato {
+        background: none;
+        padding: 0;
+    }
+
+    /* Conteúdo do header */
+    .infor-header {
+        grid-column: 1 / -1;
+
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .infor-header .frase {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+
+    .infor-header .frase span {
+        font-size: clamp(3.5rem, 14vw, 5rem);
+    }
+
+    .infor-header a {
+        margin-left: 0;
+    }
+
+    .Horario-de-fucionamento {
+        margin-left: 0;
+    }
+
+    /* elemento do cards */
+ .cards{
+    gap: 20px;
+ }
+    /* conteudo do sobre  */
+
+    .sobre {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    .sobre img,
+    .divContainer img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .divContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .descricao,
+    .fomulario {
+        width: 100%;
+    }
+
+    form input {
+        width: 100%;
+    }
+
+    .mais-Detalhes .detalhes {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .btnFooter ul {
         display: none;
+
+
+
     }
- }
+
+    .btnFooter ul.mostra {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        transition: 1s;
     }
+
+}
