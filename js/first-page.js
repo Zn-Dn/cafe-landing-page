@@ -25,6 +25,7 @@ function HorarioCafeteria() {
 HorarioCafeteria();
 
 
+///////////////////////////////////////////////////////////////////////
 
 
 async function CriaCard(){
@@ -37,7 +38,7 @@ console.log(dados)
 
 CriaCard()
 
-
+///////////////////////////////////////////////////////////////////////////
 function ativarMenu() {
     const menu = document.querySelector("nav ul");
 
@@ -49,7 +50,7 @@ document.querySelector(".menu").addEventListener("click", ativarMenu);
 ativarMenu()
 
 
-
+/////////////////////////////////////////////////////////////////////////////////
 
 const elementosFooter = document.querySelectorAll(".btnFooter");
 
@@ -64,3 +65,29 @@ elementosFooter.forEach(botao => {
     });
 
 });
+
+
+
+//////////////////////////////////////
+//formulario para whatsapp
+
+
+
+function FormularioParaWhatsapp() {
+    let name = document.querySelector("#name").value;
+    let email = document.querySelector("#email").value;
+    let number = document.querySelector("#number").value;
+    let motivo = document.querySelector("#motivo").value;
+
+    let Myphone = "+557781199685";
+
+    let mensagem = 
+        `*Nome:* ${name}
+*Email:* ${email}
+*Telefone:* ${number}
+*Mensagem:* ${motivo}`;
+
+    let url = `https://api.whatsapp.com/send?phone=${Myphone}&text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url, "_blank");
+}

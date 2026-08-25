@@ -12,16 +12,17 @@
 </head>
 
 <body>
-    <Header>
+    <Header id="inicio">
 
         <h1>Aurora Café</h1>
 
         <nav>
             <ul>
                 <li><a href="">INICIO</a></li>
-                <li><a href="">CARDAPIO</a></li>
+                <li><a href="" class="cardapio">CARDAPIO</a></li>
+                <li><a href="">LOCALIZAÇÃO</a></li>
                 <li><a href="#sobre">SOBRE</a></li>
-                <li><a href="" class="contato">CONTATO</a></li>
+                <li><a href="https://wa.me/557781199685" target="_blank" class="contato">CONTATO</a></li>
 
             </ul>
             <i class="fa-solid fa-bars menu"></i>
@@ -33,76 +34,103 @@
                 <span>começa seu dia.</span>
             </h2>
 
-            <a href="">CONHEÇA O<span> CARDÁPIO</span></a>
 
-            <span class="Horario-de-fucionamento">
-                11:00 as 15:10
-            </span>
+
+            <div class="exploreEndHours">
+
+                <button>
+                    Explore Our Menu
+                </button>
+
+                <p class="Horario-de-fucionamento">
+                    11:00 as 15:10
+                </p>
+            </div>
         </div>
     </Header>
     <main>
-        <section class="Destaque-Semana">
+
+        <section class="exploreMenu">
+
+
+
             <div class="text-destaques">
 
-                <h2>Favoritos da semana</h2>
+                <h2>Explore</h2>
 
             </div>
 
             <div class="cards">
 
-                <article class="card">
-                    <img src="./img/destaques/Espresso-removebg-preview.png" alt="Café Espresso">
+                <article class="card"
+                    style="background-image: url(https://i.pinimg.com/736x/f0/65/5f/f0655f2737da76be9b4ac435c65e3d9b.jpg);">
 
-                    <div class="card-info">
-                        <div class="nota">
-                            <i class="fa-solid fa-star"></i>
-                            <span>4.9</span>
-                        </div>
-                        <div class="nomepreco"><h3>Espresso</h3>
-                        <span>11,90</span></div>
+<div class="nota">
+    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coffee-icon lucide-coffee"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>
+                        <h3>Café</h3>
+                        <a href="">View all</a>
+</div>
+                </article>
+
+                <article class="card"
+                    style="background-image: url(https://i.pinimg.com/736x/7f/ca/87/7fca8779cefce45ca9df0e677c4cfd12.jpg);">
+                    <div class="nota">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils-crossed-icon lucide-utensils-crossed"><path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/><path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/><path d="m2.1 21.8 6.4-6.3"/><path d="m19 5-7 7"/></svg>
+                        <h3>Comida</h3>
+                        <a href="">View all</a>
+                    </div>
+
+                </article>
+
+                <article class="card"
+                
+                    style="background-image: url(https://i.pinimg.com/736x/93/97/1d/93971dd4ebc3d0c74c0042c1b17fcc26.jpg);">
+                    <div class="nota"> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sandwich-icon lucide-sandwich"><path d="m2.37 11.223 8.372-6.777a2 2 0 0 1 2.516 0l8.371 6.777"/><path d="M21 15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-5.25"/><path d="M3 15a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h9"/><path d="m6.67 15 6.13 4.6a2 2 0 0 0 2.8-.4l3.15-4.2"/><rect width="20" height="4" x="2" y="11" rx="1"/></svg>
                         
+                        <h3>Café da Manhã</h3>
+                        <a href="">View all</a>
+                    </div>
+
+                </article>
+
+                <article class="card"
+                    style="background-image: url(https://i.pinimg.com/736x/2b/0d/59/2b0d597114f8886681b3e3ab4d3a4ee1.jpg);">
+
+                    <div class="nota">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cake-slice-icon lucide-cake-slice"><path d="M16 13H3"/><path d="M16 17H3"/><path d="m7.2 7.9-3.388 2.5A2 2 0 0 0 3 12.01V20a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-8.654c0-2-2.44-6.026-6.44-8.026a1 1 0 0 0-1.082.057L10.4 5.6"/><circle cx="9" cy="7" r="2"/></svg>
+                        <h3>Sobremesa</h3>
+                        <a href="">View all</a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <img src="./img/destaques/Cappuccino-removebg-preview.png" alt="Cappuccino">
 
-                    <div class="card-info">
-                        <div class="nota">
-                            <i class="fa-solid fa-star"></i>
-                            <span>4.8</span>
-                        </div>
-                        <div class="nomepreco">
-                           <h3>Cappuccino</h3>
-                        <span>11,90</span> 
-                        </div>
-                        
+                <article class="card"
+                    style="background-image: url(https://i.pinimg.com/736x/58/96/a1/5896a19fbdaace3d79028c39c74229c2.jpg);">
+                    <div class="nota">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-martini-icon lucide-martini"><path d="M12 12 4.207 4.207A.707.707 0 0 1 4.707 3h14.586a.707.707 0 0 1 .5 1.207z"/><path d="M12 12v10"/><path d="M7 22h10"/></svg>
+                        <h3>Dricks</h3>
+                        <a href="">View all</a>
                     </div>
                 </article>
-
-                <article class="card">
-                    <img src="./img/destaques/coado-removebg-preview.png" alt="Café coado">
-
-                    <div class="card-info">
-                        <div class="nota">
-                            <i class="fa-solid fa-star"></i>
-                            <span>4.7</span>
-                        </div>
-                        <div class="nomepreco">
-                           <h3>Café Coado</h3>
-                        <span>11,90</span> 
-                        </div>
-                        
-                    </div>
-                </article>
-
             </div>
         </section>
+
+
+<section class="EmDestaque">
+<!-- quantidade de like 
+ produto
+ nome
+ preco
+ button
+ compra-->
+</section>
+
 
         <section class="sobre" id="sobre">
             <div class="imagem">
 
-                <img src="./img/About/xicara-ABOUT.png" alt="">
+                <img class=".xicaraImg" src="./img/About/xicara-ABOUT.png" alt="">
 
             </div>
 
@@ -164,24 +192,24 @@
                     <form action="">
                         <div class="campo">
                             <label for="">
-                                Name <input type="text" placeholder="Seu Nome">
+                                Name <input type="text" id="name" placeholder="Seu Nome">
                             </label>
                         </div>
                         <div class="campo">
                             <label for="">
-                                Email <input type="email" placeholder="seuEmail@email.co.">
+                                Email <input type="email" id="email" placeholder="seuEmail@email.co.">
                             </label>
                         </div>
                         <div class="campo">
                             <label for="">
-                                Telefone <input type="number" placeholder="Numero deTelefone">
+                                Telefone <input type="number" id="number" placeholder="Numero deTelefone">
                             </label>
                         </div>
-                        <label for="motivo">Motivo do contato <input type="text"></label>
+                        <label for="motivo">Motivo do contato <input type="text" id="motivo"></label>
 
-                        
+
                     </form>
-                    <button class="enviar">Enviar mensagem</button>
+                    <button class="enviar" onclick="FormularioParaWhatsapp()">Enviar mensagem</button>
                 </div>
 
             </div>
@@ -200,9 +228,9 @@
                 <div class="navegacao btnFooter">
                     <h3>Navegacao</h3>
                     <ul>
-                        <li><a href="">INICIO</a></li>
+                        <li><a href="#inicio">INICIO</a></li>
                         <li><a href="">CARDAPIO</a></li>
-                        <li><a href="">SOBRE</a></li>
+                        <li><a href="#sobre">SOBRE</a></li>
 
                     </ul>
                 </div>
@@ -210,7 +238,7 @@
                 <div class="informacao btnFooter">
                     <h3>Informações</h3>
                     <ul>
-                        <li>(77)98119-9685</li>
+                        <li><a href="#">(77)98119-9685</a></li>
                         <li>GmailIndisponivel@gmail.com</li>
 
                     </ul>
@@ -227,7 +255,7 @@
                 </div>
 
             </div>
-            
+
             <p class="copyright"> © 2026 Café & Momentos. Todos os direitos reservados. </p>
 
             <div class="redes">
@@ -254,6 +282,7 @@
         </section>
     </footer>
     <script src="./js/first-page.js"></script>
+    <script src="./js/animation.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@ html {
 header {
     background-image: url(../img/header/Gemini_Generated_Image_qd40czqd40czqd40.jfif);
     background-repeat: no-repeat;
-    background-position:  top;
+    background-position: top;
     background-size: cover;
     min-height: 100vh;
     display: grid;
@@ -50,6 +50,27 @@ nav {
                 color: var(--cor-texto-terciario)
             }
 
+            .cardapio {
+                position: relative;
+
+                &:hover{
+                    color: var(--cor-texto);
+                }
+                &::before{
+                    position: absolute;
+                    content: "";
+                    background-color: var(--cor-texto);
+                    bottom: -1px;
+                    width: 0%;
+                    height: 2px;
+                    transition: 1s;
+                }
+
+                &:hover::before{
+width: 100%;
+
+                }
+            }
 
         }
     }
@@ -90,26 +111,34 @@ nav {
 
 
 
-    span {
-        color: #B56A45;
-        font-size: clamp(4rem, 7vw, 7rem);
-        font-weight: 600;
-    }
+
+}
+
+.exploreEndHours {
+    display: flex;
+}
+
+.exploreEndHours button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
 .infor-header a {
     text-decoration: none;
     color: var(--cor-texto);
     font-size: 1.1rem;
-    margin-left: 80px;
 
 
-    span {
-        border-bottom: 2px solid var(--cor-destaque);
 
-        border-radius: 2px;
 
-    }
+
+
+
 
 }
 
@@ -130,7 +159,7 @@ main {
     min-height: 100vh
 }
 
-.Destaque-Semana {
+.exploreMenu {
     min-height: 100vh;
 
     .text-destaques {
@@ -157,56 +186,54 @@ main {
 
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
 
         .card {
-            background-color: #1e1e1e;
-            border-radius: 10px;
+           
+            border-radius: 20px;
             position: relative;
-            
-
-            img {
-                width: 300px;
-                max-width: 100%;
-
-
-            }
-        }
-
-        .card-info {
-            text-align: center;
-
-            color: var(--cor-texto);
-
-            .nota {
-                padding: 5px;
-                background-color: var(--cor-texto);
-                border-radius: 5px;
-                position: absolute;
-                top: 10%;
-                left: 80%;
-                transform: translate(-50%);
-
-                i {
-                    color: var(--cor-estrela);
-                }
-
-                span {
-                    color: var(--cor-fundo);
-                }
-            }
-
-            .nomepreco {
-                 display: flex;
+            width: 250px;
+            max-width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
             flex-direction: column;
-            justify-content: center;
+           
             align-items: center;
-                margin: -20px 0 20px 0;
-                display: flex;
-                flex-direction: column;
-                gap: 7px;
-            }
+           
+
+           &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--cor-overlay);
+}
+.nota{
+    position: absolute;
+    bottom: 60px;
+display: flex;
+    flex-direction: column;
+   align-items: center;
+
+   .lucide{
+   
+Color: var(--cor-texto);
+   }
+   h3{
+    color: var(--cor-texto);
+   }
+   a{
+    text-decoration: none;
+    color: var(--cor-texto);
+   }
+
+}
+
+
 
             h3 {
 
@@ -214,13 +241,7 @@ main {
 
             }
 
-            span {
-                color: var(--cor-azul);
-                background-color: var(--cor-texto);
-                max-width: 100%;
-                width: 100px;
-                font-weight: 600;
-            }
+
 
 
         }
@@ -230,7 +251,7 @@ main {
 
 .sobre {
 
-    background-color: var(--cor-fundo-input);
+    background-color: var(--cor-fundo);
     min-height: 100vh;
     padding: 20px;
     margin-top: 50px;
@@ -284,23 +305,11 @@ main {
     }
 }
 
-.sobre img {
-    animation: xicara 5s ease-in-out infinite;
+.xicaraImg {
+    transition: transform 0.3s ease-out;
 }
 
-@keyframes xicara {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
 
-    50% {
-        transform: translateY(-5px) rotate(1deg);
-    }
-
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-}
 
 footer {
     background-color: var(--cor-fundo);
@@ -335,10 +344,12 @@ footer {
 
 .divContainer {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
 
     .mensagem {
         display: flex;
+        flex-direction: column;
 
         .frase {
             display: flex;
@@ -363,7 +374,7 @@ footer {
             position: relative;
             left: 0;
             bottom: -10px;
-            display: none;
+
 
         }
     }
@@ -399,10 +410,10 @@ form {
 
 
     input {
-        background-color: #c47a5585;
-        border: 2px solid var(--cor-texto-secundario);
+        background-color: transparent;
+        border: 2px solid #4a3b32;
 
-        background-color: var();
+
         border-radius: 13px;
         padding: 10px;
         max-width: 100%;
@@ -413,6 +424,11 @@ form {
             padding: 5px;
             font-size: 1.1rem;
             color: var(--cor-texto);
+        }
+
+        &:hover {
+            border: 2px solid #8c634b;
+            box-shadow: 0 0 10px rgb(200, 106, 55, 0.25);
         }
     }
 
@@ -576,7 +592,7 @@ form {
 
     header {
         background-position: right;
-        
+
         grid-template-columns: 1fr auto;
         min-height: 100vh;
         padding: 20px;
@@ -689,9 +705,10 @@ form {
     }
 
     /* elemento do cards */
- .cards{
-    gap: 20px;
- }
+    .cards {
+        gap: 20px;
+    }
+
     /* conteudo do sobre  */
 
     .sobre {
