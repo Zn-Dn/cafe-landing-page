@@ -53,10 +53,11 @@ nav {
             .cardapio {
                 position: relative;
 
-                &:hover{
+                &:hover {
                     color: var(--cor-texto);
                 }
-                &::before{
+
+                &::before {
                     position: absolute;
                     content: "";
                     background-color: var(--cor-destaque);
@@ -66,8 +67,8 @@ nav {
                     transition: 1s;
                 }
 
-                &:hover::before{
-width: 100%;
+                &:hover::before {
+                    width: 100%;
 
                 }
             }
@@ -191,7 +192,7 @@ main {
         padding: 10px;
 
         .card {
-           
+
             border-radius: 20px;
             position: relative;
             width: 250px;
@@ -202,36 +203,45 @@ main {
             background-position: center;
             display: flex;
             flex-direction: column;
-           
             align-items: center;
-           
+            transition: .7s;
 
-           &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--cor-overlay);
-}
-.nota{
-    position: absolute;
-    bottom: 60px;
-display: flex;
-    flex-direction: column;
-   align-items: center;
 
-   .lucide{
-   
-Color: var(--cor-texto);
-   }
-   h3{
-    color: var(--cor-texto);
-   }
-   a{
-    text-decoration: none;
-    color: var(--cor-texto);
-   }
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: var(--cor-overlay);
+            }
+ &:hover{
+                    transform: scale(1.05);
+                }
 
-}
+
+            .nota {
+                position: absolute;
+                bottom: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .lucide {
+
+                    Color: var(--cor-texto);
+                }
+
+               
+
+                h3 {
+                    color: var(--cor-texto);
+                }
+
+                a {
+                    text-decoration: none;
+                    color: var(--cor-texto);
+                }
+
+            }
 
 
 
@@ -249,6 +259,70 @@ Color: var(--cor-texto);
     }
 }
 
+.ProdutosEMDestque{
+ min-height: 100vh;
+ 
+    h2{
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+        color: #fff;
+       padding: 40px 0 40px 0;
+    }
+
+        .ContainerProdutos{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px;
+         
+           
+
+            article{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+background-color: var(--cor-texto);
+ position: relative;
+border-radius: 10px;
+
+.produto__avaliacao{
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 20px;
+ 
+    i{
+        color: #fff;
+    }
+   
+}
+
+.produto__imagem img{
+   
+    width: 200px;
+    height: 200px;
+   
+}
+
+.produto__compra{
+    display: flex;
+    justify-content: space-between;
+align-items: center;
+
+    button{
+        border: none;
+        background-color: #4a3b32;
+        border-radius: 5px;
+        color: #fff;
+        padding: 5px;
+    }
+}
+            }
+        }
+
+        }
 .sobre {
 
     background-color: var(--cor-fundo);
@@ -313,14 +387,16 @@ Color: var(--cor-texto);
 
 footer {
     background-color: var(--cor-fundo);
-
-
     display: flex;
     flex-direction: column;
 
 
 
-
+.separacao{
+object-fit: cover;
+height: 400px;
+object-position: center;
+}
 }
 
 .agendamento {
@@ -450,7 +526,7 @@ form {
 .mais-Detalhes {
     background-color: #111;
     padding: 35px 50px 20px;
-    margin-top: 20px;
+    
 
     display: flex;
     flex-direction: column;
