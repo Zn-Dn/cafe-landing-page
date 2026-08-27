@@ -28,15 +28,13 @@ HorarioCafeteria();
 ///////////////////////////////////////////////////////////////////////
 
 
-async function CriaCard(){
-let DadosDoJson = await fetch("./js/index.json")
-let dados = await DadosDoJson.json()
-console.log(dados)
+const iconePolegar = document.querySelectorAll('.produto__avaliacao i');
 
-
-}
-
-CriaCard()
+iconePolegar.forEach(icone => {
+    icone.addEventListener('click', () => {
+        icone.classList.toggle('ativo'); // .toggle ativa se estiver desativado, e vice-versa
+    });
+});
 
 ///////////////////////////////////////////////////////////////////////////
 function ativarMenu() {
