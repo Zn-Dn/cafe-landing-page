@@ -156,7 +156,7 @@ nav {
 }
 
 main {
-    background-color: var(--cor-fundo);
+    background-color: #e1d4c2;
     min-height: 100vh
 }
 
@@ -174,7 +174,8 @@ main {
 
         h2 {
             margin: 40px 0;
-            color: var(--cor-texto);
+            /* color: var(--cor-texto); */
+            color: #111;
             font-size: clamp(2rem, 4vw, 3.2rem);
             font-weight: 600;
         }
@@ -238,27 +239,13 @@ main {
 
                
 
-                h3 {
-                    color: var(--cor-texto);
-                }
-
+                
                 a {
                     text-decoration: none;
                     color: var(--cor-texto);
                 }
 
             }
-
-
-
-            h3 {
-
-                font-size: 1.7rem;
-
-            }
-
-
-
 
         }
 
@@ -272,7 +259,7 @@ main {
         font-size: 3rem;
         font-weight: 600;
         text-align: center;
-        color: #fff;
+        color: #111;
        padding: 40px 0 40px 0;
     }
 
@@ -790,9 +777,53 @@ form {
         margin-left: 0;
     }
 
-   
+    .exploreMenu {
+    min-height: auto;
+}
+
+    .exploreMenu{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+    }
 
    
+
+   .cards .card {
+    width: 100px;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    flex: 0 0 50px;
+  
+        svg {
+            width: 50px;
+            height: 50px;
+
+            
+        }
+
+     .lucide{
+                background-color: #4a3b32;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+    img {
+        display: none;
+
+    }
+
+    h3,
+    a {
+        display: none;
+    }
+}
+  
+      .card::before {
+        display: none;
+    }
  
             
    
