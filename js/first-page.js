@@ -64,7 +64,44 @@ elementosFooter.forEach(botao => {
 
 });
 
+// Carrossel
 
+// botoes que vao mover setas
+// o tanto que vai mover calculor da width do carrossel e cards
+// oq vai mover
+// usar transform para mover a posicao
+// se a lagura dos cards em conjunto for menor que a lagura do carrosel
+// translate = soma de alguma coisa
+// posicao atual = 0
+// posicao Aterio 
+
+let carrossel = document.querySelector(".carrossel")
+let laguradocarrossel = carrossel.offsetWidth
+
+let cards = document.querySelectorAll("article")
+let esquerda =  document.querySelector(".esquerda")
+let direita =  document.querySelector(".direita")
+let posicaoAtual = 0
+
+
+esquerda.addEventListener("click",()=>{
+   posicaoAtual = posicaoAtual - 100
+
+cards.forEach(itens =>{
+       itens.style.transform = `translateX(${ posicaoAtual}%)`;
+    }) 
+  
+})
+
+
+
+direita.addEventListener("click",()=>{
+  posicaoAtual = posicaoAtual + 100
+
+cards.forEach(itens =>{
+       itens.style.transform = `translateX(${ posicaoAtual}%)`;
+    }) 
+})
 
 //////////////////////////////////////
 //formulario para whatsapp
