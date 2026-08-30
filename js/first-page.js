@@ -64,49 +64,48 @@ elementosFooter.forEach(botao => {
 
 });
 
-// Carrossel
+const carrossel = document.querySelector(".carrossel");
+const janela = document.querySelector(".janelacarrossel");
+const cards = document.querySelectorAll(".produtoCafe");
 
-// botoes que vao mover setas
-// o tanto que vai mover calculor da width do carrossel e cards
-// oq vai mover
-// usar transform para mover a posicao
-// se a lagura dos cards em conjunto for menor que a lagura do carrosel
-// translate = soma de alguma coisa
-// posicao atual = 0
-// posicao Aterio 
+const esquerda = document.querySelector(".esquerda");
+const direita = document.querySelector(".direita");
 
-let carrossel = document.querySelector(".carrossel")
-let laguradocarrossel = carrossel.offsetWidth
+let posicaoAtual = 0;
 
-let cards = document.querySelectorAll("article")
-let esquerda =  document.querySelector(".esquerda")
-let direita =  document.querySelector(".direita")
-let posicaoAtual = 0
+function getPasso() {
+    const largura = cards[0].offsetWidth;
+    const gap = parseFloat(getComputedStyle(carrossel).gap) || 0;
+    return largura + gap;
+}
 
+direita.addEventListener("click", () => {
+    const passo = getPasso();
+    const limite = carrossel.scrollWidth - janela.clientWidth;
 
-esquerda.addEventListener("click",()=>{
-   posicaoAtual = posicaoAtual - 100
+    posicaoAtual = Math.min(posicaoAtual + passo, limite);
 
-cards.forEach(itens =>{
-       itens.style.transform = `translateX(${ posicaoAtual}%)`;
-    }) 
-  
-})
+    carrossel.style.transform = `translateX(-${posicaoAtual}px)`;
+});
 
+esquerda.addEventListener("click", () => {
+    const passo = getPasso();
 
+    posicaoAtual = Math.max(posicaoAtual - passo, 0);
 
-direita.addEventListener("click",()=>{
-  posicaoAtual = posicaoAtual + 100
-
-cards.forEach(itens =>{
-       itens.style.transform = `translateX(${ posicaoAtual}%)`;
-    }) 
-})
-
+    carrossel.style.transform = `translateX(-${posicaoAtual}px)`;
+});
 //////////////////////////////////////
+
+let mostramais = document.querySelector(".descricao button")
+let descricao = document.querySelector(".descricao")
+let textoOculto = document.querySelector(".mais")
+mostramais.addEventListener("click",()=>{
+textoOculto.classList.toggle("mostraTexto")
+descricao.classList.toggle("mostraTexto")
+})
+
 //formulario para whatsapp
-
-
 
 function FormularioParaWhatsapp() {
     let name = document.querySelector("#name").value;
