@@ -9,28 +9,29 @@ header {
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    padding: 30px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+ 
+padding: 20px;
 
-
-img{
-    width: 200px;
-    position: relative;
-    top: -10px;
-}
 
 }
 
 
-h1 {
-    color: var(--cor-texto);
-    font-size: clamp(2rem, 3rem, 4rem);
 
-}
 
 nav {
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+img{
+    width: auto;
+    height: 100px;
+    position: relative;
+    
+}
 
     .menu {
         display: none;
@@ -186,7 +187,6 @@ main {
         .janelacarrossel {
             overflow: hidden;
             display: flex;
-           
             align-items: center;
             width: 90%;
             
@@ -467,7 +467,6 @@ display: flex;
 
 label {
     font-size: 1.4rem;
-
     display: flex;
 flex-direction: column;
     gap: 10px;
@@ -475,7 +474,7 @@ flex-direction: column;
 
 form {
      width: 100%;
-    max-width: 500px;     
+       
     margin-inline: auto;
     display: flex;
     gap: 20px;
@@ -667,3 +666,10 @@ color: var(--cor-texto);
 
     margin-bottom: 15px;
 }
+
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+min-height: 100vh;
+   
+}}

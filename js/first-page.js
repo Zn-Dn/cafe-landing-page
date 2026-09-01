@@ -1,3 +1,17 @@
+let menu = document.querySelector(".menu");
+let nav = document.querySelector("nav div");
+
+function ativarMenu() {
+    nav.classList.toggle("ativo");
+}
+menu.addEventListener("click", () => {
+    ativarMenu();
+
+});
+
+
+
+
 let hrDeFuncionamento = document.querySelector(".Horario-de-fucionamento");
 
 function HorarioCafeteria() {
@@ -15,7 +29,7 @@ function HorarioCafeteria() {
 
         } else {
 
-           hrDeFuncionamento.style.backgroundColor = "#A34F45";
+            hrDeFuncionamento.style.backgroundColor = "#A34F45";
 
         }
 
@@ -36,19 +50,6 @@ iconePolegar.forEach(icone => {
     });
 });
 
-///////////////////////////////////////////////////////////////////////////
-function ativarMenu() {
-    const menu = document.querySelector("nav ul");
-
-    menu.classList.toggle("ativo");
-}
-
-document.querySelector(".menu").addEventListener("click", ativarMenu);
-
-ativarMenu()
-
-
-/////////////////////////////////////////////////////////////////////////////////
 
 const elementosFooter = document.querySelectorAll(".btnFooter");
 
@@ -100,9 +101,9 @@ esquerda.addEventListener("click", () => {
 let mostramais = document.querySelector(".descricao button")
 let descricao = document.querySelector(".descricao")
 let textoOculto = document.querySelector(".mais")
-mostramais.addEventListener("click",()=>{
-textoOculto.classList.toggle("mostraTexto")
-descricao.classList.toggle("mostraTexto")
+mostramais.addEventListener("click", () => {
+    textoOculto.classList.toggle("mostraTexto")
+    descricao.classList.toggle("mostraTexto")
 })
 
 //formulario para whatsapp
@@ -115,7 +116,7 @@ function FormularioParaWhatsapp() {
 
     let Myphone = "+557781199685";
 
-    let mensagem = 
+    let mensagem =
         `*Nome:* ${name}
 *Email:* ${email}
 *Telefone:* ${number}
