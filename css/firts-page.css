@@ -1,5 +1,5 @@
 @import url(./global.css);
-
+@import url(./mobile.css);
 html {
     scroll-behavior: smooth;
 }
@@ -172,22 +172,25 @@ main {
         padding: 10px 0 40px 0;
     }
 
-    .ContainerProdutos {
+
+    .CarrosselProdutos,.ContainerProdutos {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         gap: 10px;
-        padding: 20px;
+       
+ 
+
 
         .janelacarrossel {
             overflow: hidden;
             display: flex;
-            justify-content: flex-start;
+           
             align-items: center;
             width: 90%;
-            flex: 0 0 auto;
-        }
+            
+       }
 
         .carrossel {
             display: flex;
@@ -197,7 +200,7 @@ main {
         }
 
         .produtoCafe {
-            width: 220px;
+            width: 20px;
             flex: 0 0 auto;
             min-width: 220px;
             max-width: 220px;
@@ -454,15 +457,12 @@ footer {
 }
 
 
-.fomulario {
-
-    display: flex;
+.formulario {
     gap: 20px;
+display: flex;
     flex-direction: column;
-  
     align-items: center;
-
-
+    width: 100%; 
 }
 
 label {
@@ -474,12 +474,12 @@ flex-direction: column;
 }
 
 form {
-
+     width: 100%;
+    max-width: 500px;     
+    margin-inline: auto;
     display: flex;
     gap: 20px;
     flex-direction: column;
-
-    
     color: var(--cor-texto);
 
 
@@ -490,8 +490,9 @@ form {
         border: 2px solid var(--cor-marrom);
         border-radius: 13px;
         padding: 10px;
-        width: 500px;
-        max-width: 100%;
+       
+        width: 100%;
+        
         color: var(--cor-fundo-card);
 
         &::placeholder {
@@ -524,29 +525,34 @@ form {
 }
 
 .mais-Detalhes {
-    background-color: #111;
-    padding: 35px 50px 20px;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    grid-template-areas:
+        "name navegacao informacao funcionamento"
+        "copyright copyright copyright redes";
+
+    gap: 40px;
+    padding: 50px 60px 25px;
+color: var(--cor-texto);
+ background-color: #111;}
 
 
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    gap: 35px;
+.name {
+    grid-area: name;
+}
 
-    color: var(--cor-texto);
-
-    .detalhes {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-    }
+.navegacao {
+    grid-area: navegacao;
 }
 
 
-/* Títulos das colunas */
+ .informacao {
+    grid-area: informacao;
+}
+
+.fucionamento {
+    grid-area: funcionamento;
+}
 .navegacao,
 .informacao,
 .fucionamento {
@@ -597,6 +603,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-area: redes;
 }
 
 .redes ul {
@@ -639,7 +646,7 @@ form {
 /* Copyright */
 .copyright {
     position: relative;
-
+ grid-area: copyright;
     text-align: center;
 
     padding-top: 20px;
@@ -659,164 +666,4 @@ form {
     background-color: #ffffff20;
 
     margin-bottom: 15px;
-}
-
-
- @media (max-width: 768px){
- 
-.Produtos {
-    min-height: 100vh;
-
-    h2 {
-        font-size: 3rem;
-        font-weight: 600;
-        text-align: center;
-        color: var(--cor-texto);
-        padding: 10px 0 40px 0;
-    }
-
-    .ContainerProdutos {
-        display: flex;
-       
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 5px;
-
-      
- .janelacarrossel {
-            
-            width: 64%;
-           
-        }
-        .produtoCafe {
-           
-            width: 120px;
-            min-width: 120px;
-            max-width: 120px;
-        }
-
-     
-
-        article {
-            
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 10px;
-            border: 2px solid #f2e9dc4b;
-            position: relative;
-            border-radius: 10px;
-
-            .produto__avaliacao {
-                position: absolute;
-                z-index: 10;
-                top: 30px;
-                left: 20px;
-
-                i {
-                    color: #fff;
-                }
-
-                i.ativo {
-                    color: #f2f205;
-                }
-            }
-
-            .produto__imagem img {
-                width: 100px;
-                height: 100px;
-                border-radius: 10px;
-            }
-
-            .produto__conteudo {
-                color: var(--cor-texto);
-                display: flex;
-                flex-direction: column;
-           gap: 10px;
-
-           h3{
-            text-align:center ;
-           }
-           
-            }
-
-            .produto__compra {
-                display: flex;
-                gap: 5px;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-
-                button {
-                    border: none;
-                    background-color: #4a3b32;
-                    border-radius: 5px;
-                    color: #fff;
-                    padding: 5px;
-                    font-weight: 700;
-                }
-            }
-        }
-    }
-}
-
-    .sobre {
-        display: flex;
-        flex-direction: column;
-        .imagem{
-           img {
-            display: none;
-        } 
-        }
-
-        
-    }
-
-
-
-
-    .containerInfor{
-        img{
-            display: none;
-        }
-    }
-
-
-   .navegacao,
-.informacao,
-.fucionamento {
-
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    h3 {
-        margin: 0;
-        color: var(--cor-marrom-claro);
-        font-size: 1.3rem;
-        font-weight: 700;
-    }
-
-    ul {
-        list-style: none;
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        
-        &.mostra{
-            display: flex;
-        }
-
-        li {
-
-            a {
-                color: var(--cor-texto);
-                text-decoration: none;
-                font-size: 1rem;
-                transition: .3s;
-            }
-        }
-    }
-}
 }
