@@ -1,393 +1,327 @@
-/* Breakpoint para tablets pequenos e celulares */
-@media (max-width: 768px) {
+@import url(/css/global.css);
 
-    * {
-        overflow-x: hidden;
+#inicio {
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+
+}
+
+#inicio nav {
+
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .menu {
+        z-index: 111;
+        color: var(--cor-marrom-claro);
     }
 
-    header {
-        min-height: 500px;
-        padding: 1rem;
-        gap: 2rem;
-        background-position: center right;
-        position: relative;
 
-        nav {
-            width: 100%;
-            justify-content: space-between;
-
-            img {
-                width: 200px;
-                height: auto;
-            }
+}
 
 
-       .nav-links {
-        height: 100%;
-        width: 200px;
+#inicio nav img {
+    width: 120px;
+    height: auto;
+    background-size: cover;
+}
+
+#inicio nav .nav-links {
+    background-image: url(../img/header/imagem-menu.png);
+    background-size: cover;
+    padding: 10px;
+    background-color: var(--cor-fundo-card);
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
+    transform: translateX(380px);
+    height: 100%;
+    width: 100%;
 
-    transform: translateX(200px);
 
-    background-color: var(--cor-destaque);
-    padding: 1rem;
-    border-radius: 10px;
-    z-index: 99;
+    transition: all 1s ease-in-out;
 
-    opacity: 0;
-    visibility: hidden;
-
-    transition: 1s ease-in-out;
 
     &.ativo {
         transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
     }
 }
 
-            ul {
+#inicio nav .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-                 position: absolute;
-   top: 50px;
-    right: 50px;
-  
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
-                list-style: none;
-                
+}
 
-                li a {
-                    font-size: 1.2rem;
-                    color: #fff;
-                }
-            }
+#inicio nav .nav-links li {
+    list-style: none;
+}
 
+#inicio nav .nav-links a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
 
 
-            .menu {
-                z-index: 9999;
-                display: block;
-                color: #fff;
-                font-size: 1.5rem;
-            }
-        }
 
-        .text {
-            width: 100%;
+.frase {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--cor-texto);
 
-            .infor-header {
-                max-width: 100%;
-                width: 100%;
-                padding: 0 1rem;
-            }
-
-            .frase {
-                font-size: clamp(1.8rem, 5vw, 3rem);
-                line-height: 1.2;
-            }
-
-            .exploreEndHours {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            .exploreEndHours button {
-                width: 200px;
-                max-width: 100%;
-            }
-        }
+    span {
+        color: var(--cor-destaque);
     }
+}
 
-    .Horario-de-fucionamento {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        font-size: 0.9rem;
-        margin-left: 0;
-    }
+.infor-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
+.infor-header p {
+    color: #fff;
+}
 
+.exploreEndHours {
+    display: flex;
+    gap: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-    .Produtos {
-        min-height: 100vh;
-        padding: 1rem;
-
-        h2 {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            padding: 10px 0 30px 0;
-        }
-
-
-        .ContainerProdutos {
-            flex-direction: column;
-            width: 100%;
-            flex-wrap: wrap;
-
-            .janelacarrossel {
-                width: 100%;
-            }
-
-            .produtoCafe {
-                width: 80px;
-                min-width: 80px;
-                max-width: 80px;
-            }
+.exploreEndHours button,
+.Horario-de-fucionamento {
+    padding: 5px;
+    border-radius: 5px;
+}
 
 
 
-            article {
 
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                padding: 10px;
-                border: 2px solid #f2e9dc4b;
-                position: relative;
-                border-radius: 10px;
 
-                .produto__avaliacao {
-                    top: 10px;
-                    left: 10px;
+/* Destaques da semana */
+.Produtos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
 
-                    i {
-                        font-size: 0.9rem;
-                    }
-                }
 
-                .produto__imagem img {
-                    width: 100px;
-                    height: 100px;
-                    margin: 0 auto;
-                }
+.Produtos h2 {
+    text-align: center;
+    color: var(--cor-texto);
+}
 
-                .produto__conteudo {
-                    text-align: center;
-                    font-size: 0.9rem;
-                }
+.ContainerProdutos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 
-                .produto__compra {
-                    flex-direction: column;
-                    justify-content: center;
-                }
-
-                .produto__compra button {
-                    padding: 5px 10px;
-
-                }
-            }
-        }
-    }
-
-    .sobre {
-        flex-direction: column;
-        padding: 1rem;
-        min-height: auto;
-        gap: 1rem;
-
-        img {
-            display: none;
-        }
-
-        .descricao {
-            width: 100%;
-            height: auto;
-            max-height: 500px;
-            padding: 1.5rem;
-
-            h2 {
-                font-size: clamp(1.5rem, 4vw, 2rem);
-            }
-
-            p {
-                font-size: clamp(0.9rem, 2vw, 1rem);
-            }
-
-            button {
-                width: auto;
-                padding: 8px 15px;
-            }
-        }
-    }
-
-    .agendamento {
-        margin-top: 20px;
-        min-height: auto;
-        padding: 1rem;
-        gap: 1.5rem;
-
-        h2 {
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            margin-top: 1rem;
-        }
-    }
-
-    .divContainer {
-        padding: 1.5rem;
-        gap: 1rem;
-
-        .containerInfor {
-            flex-direction: column;
-            gap: 1rem;
-
-            img {
-                display: none;
-            }
-        }
-
-        .frase {
-            gap: 0.5rem;
-
-            h3 {
-                font-size: clamp(1.2rem, 3vw, 1.5rem);
-            }
-
-            p {
-                font-size: clamp(1rem, 2.5vw, 1.2rem);
-            }
-        }
-    }
-
-    .formulario {
-        gap: 1rem;
-        padding: 0;
-    }
-
-    label {
-        font-size: clamp(0.9rem, 2vw, 1.2rem);
-        width: 100%;
-    }
-
-    form {
-        max-width: 100%;
-        gap: 1rem;
-
-        input {
-            border-radius: 10px;
-            font-size: 1rem;
-
-            &::placeholder {
-                padding: 0;
-                font-size: 0.9rem;
-            }
-        }
-    }
-
-    .enviar {
+    article {
+        border: 2px solid var(--cor-texto-secundario);
         border-radius: 10px;
         padding: 10px;
-        font-size: 1rem;
-        width: 100%;
-        max-width: 200px;
+        position: relative;
+
+        .produto_avaliacao i {
+            color: #fff;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        figure img {
+
+            width: 100%;
+            height: 120px;
+            background-size: cover;
+        }
+
+
     }
 
-    .mais-Detalhes {
-        gap: 2rem;
-        padding: 1.5rem;
 
-        .name,
-        .navegacao,
-        .informacao,
-        .fucionamento {
-            gap: 1rem;
 
-            h3 {
-                font-size: 1.1rem;
+}
+
+/* Nome do produto */
+.produto_conteudo {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        color: var(--cor-texto);
+    }
+
+    /* Preco do produto */
+
+    .produto_compra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .produto_preco {
+            color: var(--cor-texto);
+        }
+
+        button {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: var(--cor-verde-claro);
+            color: #fff;
+            font-weight: 600;
+            transition: 1s;
+
+            &:hover {
+                color: #c0bfbf;
+                background-color: var(--cor-verde);
+                cursor: pointer;
             }
-
-            ul {
-                gap: 0.5rem;
-
-                li a {
-                    font-size: 0.9rem;
-                }
-
-                li a:hover {
-                    color: var(--cor-destaque);
-                    padding-left: 5px;
-                }
-            }
-        }
-    }
-
-    .redes {
-        margin-top: 1rem;
-
-        ul {
-            gap: 10px;
-        }
-
-        a {
-            width: 36px;
-            height: 36px;
-            font-size: 1rem;
-        }
-
-        a:hover {
-            transform: translateY(-2px);
-        }
-    }
-
-    .copyright {
-        padding-top: 1rem;
-        font-size: 0.8rem;
-
-        &::before {
-            margin-bottom: 1rem;
         }
     }
 }
 
 
-@media (max-width: 480px) {
+/* Carrossel animando */
+.CarrosselProdutos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+position: relative;
+    .seta{
+       
+        color: #ffff;
+        font-size: 2rem;
+    }
 
-    header {
-        padding: 0.75rem 3% !important;
+    .esquerda{
+        position: absolute;
+        left: -10px;
+        z-index: 11;
+    }
 
-        nav img {
-            width: 120px;
+     .direita{
+        position: absolute;
+        right: -10px;
+        z-index: 11;
+    }
+
+}
+
+.janelacarrossel {
+    overflow-x: hidden;
+ 
+}
+
+.carrossel {
+    display: flex;
+    
+    gap: 10px;
+    transition: 1s;
+
+position: relative;
+    article {
+
+        padding: 10px;
+        background-color: var(--cor-fundo-terciario);
+        border-radius: 10px;
+        position: relative;
+
+
+        .produto_avaliacao i {
+            color: #fff;
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
 
-        .text {
-            .infor-header {
-                padding: 0 0.5rem;
-            }
-
-            .frase {
-                font-size: clamp(1.5rem, 4vw, 2.5rem);
-            }
-
-            .exploreEndHours {
-                gap: 0.5rem;
-            }
+        .produto_compra {
+         
+            display: flex;
+           gap: 5px;
+            align-items: flex-start;
+            flex-direction: column;
         }
     }
 
-    .Produtos h2 {
-        font-size: clamp(1.3rem, 3vw, 1.8rem);
+
+.produto_imagem img {
+    width: 150px;
+}
+
+.produto_conteudo{
+    display: flex;
+    flex-direction: column;
+    
+}
+.produto_conteudo h3{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+}
+
+
+
+img {
+    width: 200px;
+
+}
+
+.sobre{
+    img{
+        display: none;
+    }
+    padding: 20px;
+
+    .descricao{
+       background-color: var(--cor-verde); 
+border-radius: 10px;
+padding: 10px;
+display: flex;
+gap: 10px;
+flex-direction: column;
+justify-content: center;
     }
 
-    .mais-Detalhes {
-        padding: 1rem;
-        gap: 1.5rem;
+    .descricao h2{
+        text-align: center;
+        font-size: 2rem;
+        color: var(--cor-texto);
+        
+        
     }
 
-    .formulario,
-    form {
-        padding: 0;
+    p{
+        color: var(--cor-texto);
+    }
+
+    .mais{
+        display: none;
+        
+    }
+
+
+    button{
+        border: none;
+        background-color: var( --cor-verde);
+        color: #fff;
+        font-size: 1rem;
+       
     }
 }
