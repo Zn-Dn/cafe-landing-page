@@ -18,20 +18,25 @@ function HorarioCafeteria() {
 
     setInterval(() => {
 
-        let agora = new Date();
-        let hora = agora.getHours();
+        const agora = new Date();
+        const hora = agora.getHours();
+const hoje = new Date()
 
         if (hora > 11 && hora < 16) {
 
             hrDeFuncionamento.style.backgroundColor = "#667052";
 
-            console.log(hora);
-
-        } else {
+            console.log(hora)
+        } 
+        else  if(hoje.getDay() === 0){
 
             hrDeFuncionamento.style.backgroundColor = "#A34F45";
 
         }
+        else{
+             hrDeFuncionamento.style.backgroundColor = "#A34F45";
+        }
+
 
     }, 3000);
 }
@@ -46,7 +51,7 @@ const iconePolegar = document.querySelectorAll('.produto__avaliacao i');
 
 iconePolegar.forEach(icone => {
     icone.addEventListener('click', () => {
-        icone.classList.toggle('ativo'); // .toggle ativa se estiver desativado, e vice-versa
+        icone.classList.toggle('ativo'); 
     });
 });
 
@@ -97,14 +102,16 @@ esquerda.addEventListener("click", () => {
     carrossel.style.transform = `translateX(-${posicaoAtual}px)`;
 });
 //////////////////////////////////////
+// mostra descricao completa
 
-let mostramais = document.querySelector(".descricao button")
-let descricao = document.querySelector(".descricao")
-let textoOculto = document.querySelector(".mais")
-mostramais.addEventListener("click", () => {
-    textoOculto.classList.toggle("mostraTexto")
-    descricao.classList.toggle("mostraTexto")
+const mais = document.querySelector(".mais")
+const ButtonMostraMais = document.querySelector(".descricao button")
+
+ButtonMostraMais.addEventListener("click",()=>{
+    mais.classList.toggle("mostratexto")
 })
+
+
 
 //formulario para whatsapp
 
