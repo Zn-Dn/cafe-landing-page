@@ -10,7 +10,7 @@ menu.addEventListener("click", () => {
 });
 
 
-
+// horario de fucionamento
 
 let hrDeFuncionamento = document.querySelector(".Horario-de-fucionamento");
 
@@ -22,21 +22,22 @@ function HorarioCafeteria() {
         const hora = agora.getHours();
 const hoje = new Date()
 
-        if (hora > 11 && hora < 16) {
+if (hoje.getDay() === 0) {
 
-            hrDeFuncionamento.style.backgroundColor = "#667052";
+    hrDeFuncionamento.style.backgroundColor = "#A34F45";
+    hrDeFuncionamento.textContent = "Fechado";
 
-            console.log(hora)
-        } 
-        else  if(hoje.getDay() === 0){
+} else if (hora >= 11 && hora < 16) {
 
-            hrDeFuncionamento.style.backgroundColor = "#A34F45";
+    hrDeFuncionamento.style.backgroundColor = "#667052";
+    hrDeFuncionamento.textContent = "Aberto";
 
-        }
-        else{
-             hrDeFuncionamento.style.backgroundColor = "#A34F45";
-        }
+} else {
 
+    hrDeFuncionamento.style.backgroundColor = "#A34F45";
+    hrDeFuncionamento.textContent = "Fechado";
+
+}
 
     }, 3000);
 }
@@ -47,7 +48,7 @@ HorarioCafeteria();
 ///////////////////////////////////////////////////////////////////////
 
 
-const iconePolegar = document.querySelectorAll('.produto__avaliacao i');
+const iconePolegar = document.querySelectorAll('.produto_avaliacao i');
 
 iconePolegar.forEach(icone => {
     icone.addEventListener('click', () => {
