@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "nome": "Espresso",
+    "descricao": "Café intenso e encorpado, preparado com grãos selecionados.",
+    "nota": 4.8,
+    "preco": 6.00,
+    "categoria": "Cafés",
+    "imagem": "https://i.pinimg.com/736x/0e/c1/0c/0ec10cee8bae54d2657722b7ad0ae948.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Cappuccino",
+    "descricao": "Espresso combinado com leite vaporizado e uma camada cremosa de espuma.",
+    "nota": 4.9,
+    "preco": 9.50,
+    "categoria": "Cafés",
+    "imagem": "https://i.pinimg.com/736x/4d/e4/0c/4de40c8bbd7ca5c9a76587faf386d444.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Café Coado",
+    "descricao": "Café suave e aromático, preparado pelo método tradicional de filtragem.",
+    "nota": 4.7,
+    "preco": 5.50,
+    "categoria": "Cafés",
+    "imagem": "https://i.pinimg.com/736x/f6/2d/da/f62ddaa0195a7b81d66806697e499594.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "Café com Leite",
+    "descricao": "Combinação equilibrada de café fresco e leite cremoso.",
+    "nota": 4.6,
+    "preco": 7.00,
+    "categoria": "Cafés",
+    "imagem": "https://i.pinimg.com/736x/87/4b/86/874b862516d2cb5d48f84da5a44eb58a.jpg"
+  },
+  {
+    "id": 5,
+    "nome": "Café Macchiato",
+    "descricao": "Espresso intenso finalizado com uma pequena quantidade de leite vaporizado.",
+    "nota": 4.7,
+    "preco": 8.50,
+    "categoria": "Cafés",
+    "imagem": "https://i.pinimg.com/1200x/b8/4c/9d/b84c9db0910aa8247d79b69a4ecd1438.jpg"
+  },
+  {
+    "id": 6,
+    "nome": "Café Mocha",
+    "descricao": "Espresso, leite vaporizado e chocolate combinados em uma bebida cremosa.",
+    "nota": 4.9,
+    "preco": 11.00,
+    "categoria": "Cafés",
+    "imagem": "https://i.pinimg.com/1200x/b1/8d/50/b18d50fa62686644792732a3f609275f.jpg"
+  },
+  {
+    "id": 7,
+    "nome": "Latte",
+    "descricao": "Espresso suave combinado com bastante leite vaporizado e uma fina camada de espuma.",
+    "nota": 4.8,
+    "preco": 10.00,
+    "categoria": "Cafés",
+    "imagem": "https://i.pinimg.com/736x/ad/a1/f5/ada1f592737c541839a1cadd0498da3d.jpg"
+  },
+  {
+    "id": 8,
+    "nome": "Flat White",
+    "descricao": "Espresso encorpado com leite vaporizado e textura aveludada.",
+    "nota": 4.8,
+    "preco": 10.50,
+    "categoria": "Cafés",
+    "imagem": "https://i.pinimg.com/1200x/54/17/a7/5417a7c27cd0b16180429ead68f1a15b.jpg"
+  },
+  {
+    "id": 9,
+    "nome": "Americano",
+    "descricao": "Espresso diluído em água quente, resultando em uma bebida leve e aromática.",
+    "nota": 4.5,
+    "preco": 7.00,
+    "categoria": "Cafés",
+    "imagem": "https://i.pinimg.com/1200x/4e/3d/c8/4e3dc8baad6fcfe6c8e08f8d32a1ae43.jpg"
+  },
+  {
+    "id": 10, 
+    "nome": "Affogato",
+    "descricao": "Sorvete de baunilha servido com uma dose de espresso quente.",
+    "nota": 4.9,
+    "preco": 13.00,
+    "categoria": "Cafés",
+    "imagem": "https://i.pinimg.com/1200x/51/6b/0b/516b0b7583a4dae01808338fa8dcd19c.jpg"
+  },
+  {
+    "id": 11,
+    "nome": "Cold Brew",
+    "descricao": "Café extraído lentamente a frio, com sabor suave e baixa acidez.",
+    "nota": 4.8,
+    "preco": 12.00,
+    "categoria": "Bebidas Geladas",
+    "imagem": "https://i.pinimg.com/736x/ed/cf/b8/edcfb8edb930727bf29dedbce841b173.jpg"
+  },
+  {
+    "id": 12,
+    "nome": "Iced Latte",
+    "descricao": "Espresso e leite gelado servidos sobre gelo.",
+    "nota": 4.7,
+    "preco": 11.00,
+    "categoria": "Bebidas Geladas",
+    "imagem": "https://i.pinimg.com/736x/8e/41/dd/8e41dd49821ad3f6cd98b330b954944a.jpg"
+  },
+  {
+    "id": 13,
+    "nome": "Iced Mocha",
+    "descricao": "Café espresso, leite gelado e chocolate servidos com gelo.",
+    "nota": 4.8,
+    "preco": 12.50,
+    "categoria": "Bebidas Geladas",
+    "imagem": "https://i.pinimg.com/736x/6e/b7/f5/6eb7f517c0f2eb5d9068cb5ad1dffd4f.jpg"
+  },
+  {
+    "id": 14,
+    "nome": "Frappuccino de Café",
+    "descricao": "Bebida gelada cremosa feita com café, leite e gelo.",
+    "nota": 4.9,
+    "preco": 14.00,
+    "categoria": "Bebidas Geladas",
+    "imagem": ""
+  },
+  {
+    "id": 15,
+    "nome": "Frapê de Chocolate",
+    "descricao": "Bebida gelada e cremosa de chocolate com leite e gelo.",
+    "nota": 4.8,
+    "preco": 14.50,
+    "categoria": "Bebidas Geladas",
+    "imagem": "https://i.pinimg.com/736x/a1/f2/3b/a1f23bbc63595a9722814519a8b5bc05.jpg"
+  },
+  {
+    "id": 16,
+    "nome": "Chá de Camomila",
+    "descricao": "Infusão delicada de camomila com aroma suave e reconfortante.",
+    "nota": 4.6,
+    "preco": 6.00,
+    "categoria": "Chás",
+    "imagem": "https://i.pinimg.com/1200x/33/58/d8/3358d8b3bc716de192eeac9ab2f23faa.jpg"
+  },
+  {
+    "id": 17,
+    "nome": "Chá de Hortelã",
+    "descricao": "Infusão refrescante de folhas de hortelã.",
+    "nota": 4.6,
+    "preco": 6.00,
+    "categoria": "Chás",
+    "imagem": "https://i.pinimg.com/736x/17/dc/90/17dc90fba9d031fb2393d45b15fa05da.jpg"
+  },
+  {
+    "id": 18,
+    "nome": "Chá Preto",
+    "descricao": "Chá de sabor marcante e aroma intenso, servido quente.",
+    "nota": 4.5,
+    "preco": 6.50,
+    "categoria": "Chás",
+    "imagem": "https://i.pinimg.com/736x/4f/40/cb/4f40cb55b1c07110139cb85f6c6f1080.jpg"
+  },
+  {
+    "id": 19,
+    "nome": "Chá de Frutas Vermelhas",
+    "descricao": "Infusão aromática com notas doces e frutadas.",
+    "nota": 4.8,
+    "preco": 7.50,
+    "categoria": "Chás",
+    "imagem": "https://i.pinimg.com/1200x/6d/b4/47/6db447f0e38629e7bb5e93f2080eb67e.jpg"
+  },
+  {
+    "id": 20,
+    "nome": "Chai Latte",
+    "descricao": "Chá preto combinado com leite vaporizado e especiarias aromáticas.",
+    "nota": 4.8,
+    "preco": 10.00,
+    "categoria": "Chás",
+    "imagem": "https://i.pinimg.com/736x/41/95/26/4195264c49db24ce5035722576a92f47.jpg"
+  },
+  {
+    "id": 21,
+    "nome": "Chocolate Quente",
+    "descricao": "Chocolate cremoso e quente, perfeito para os dias mais frios.",
+    "nota": 4.9,
+    "preco": 10.00,
+    "categoria": "Chocolate",
+    "imagem": "https://i.pinimg.com/1200x/c3/d9/91/c3d991fe294300f08e8cfd1a6971d93b.jpg"
+  },
+  {
+    "id": 22,
+    "nome": "Chocolate Quente Especial",
+    "descricao": "Chocolate quente cremoso finalizado com chantilly e raspas de chocolate.",
+    "nota": 4.9,
+    "preco": 13.00,
+    "categoria": "Chocolate",
+    "imagem": ""
+  },
+  {
+    "id": 23,
+    "nome": "Chocolate Branco Quente",
+    "descricao": "Bebida cremosa preparada com chocolate branco e leite.",
+    "nota": 4.7,
+    "preco": 11.50,
+    "categoria": "Chocolate",
+    "imagem": "https://i.pinimg.com/1200x/1b/32/a6/1b32a6725d52bf7b2bc4e49bbe44f991.jpg"
+  },
+  {
+    "id": 24,
+    "nome": "Brownie de Chocolate",
+    "descricao": "Brownie macio e intenso, preparado com chocolate e servido em temperatura ambiente.",
+    "nota": 4.9,
+    "preco": 8.50,
+    "categoria": "Doces",
+    "imagem": "https://i.pinimg.com/736x/15/b7/0d/15b70d33ed4a06d3edd081014c15c39d.jpg"
+  },
+  {
+    "id": 25,
+    "nome": "Cookie de Chocolate",
+    "descricao": "Cookie crocante por fora e macio por dentro, com pedaços de chocolate.",
+    "nota": 4.8,
+    "preco": 7.00,
+    "categoria": "Doces",
+    "imagem": ""
+  },
+  {
+    "id": 26,
+    "nome": "Cookie de Baunilha",
+    "descricao": "Cookie artesanal de baunilha com textura macia e sabor delicado.",
+    "nota": 4.6,
+    "preco": 6.50,
+    "categoria": "Doces",
+    "imagem": "https://i.pinimg.com/1200x/8c/fe/f9/8cfef9ee6c9017f38c166813d2a277bc.jpg"
+  },
+  {
+    "id": 27,
+    "nome": "Cheesecake de Frutas Vermelhas",
+    "descricao": "Cheesecake cremoso coberto com calda de frutas vermelhas.",
+    "nota": 4.9,
+    "preco": 14.00,
+    "categoria": "Doces",
+    "imagem": "https://i.pinimg.com/736x/91/c7/32/91c732154ff948e08e4cc8e027f6942c.jpg"
+  },
+  {
+    "id": 28,
+    "nome": "Torta de Limão",
+    "descricao": "Torta cremosa de limão com base crocante e cobertura delicada.",
+    "nota": 4.8,
+    "preco": 12.00,
+    "categoria": "Doces",
+    "imagem": "https://i.pinimg.com/736x/d2/99/6a/d2996a442007b444a8189032cb3e99c5.jpg"
+  },
+  {
+    "id": 29,
+    "nome": "Torta de Chocolate",
+    "descricao": "Torta cremosa de chocolate com base crocante.",
+    "nota": 4.9,
+    "preco": 13.00,
+    "categoria": "Doces",
+    "imagem": "https://i.pinimg.com/736x/53/3b/b3/533bb35bdc76203c6a1b3d2dfa906e2a.jpg"
+  },
+  {
+    "id": 30,
+    "nome": "Bolo de Cenoura",
+    "descricao": "Bolo caseiro de cenoura coberto com uma generosa camada de chocolate.",
+    "nota": 4.9,
+    "preco": 8.00,
+    "categoria": "Bolos",
+    "imagem": "https://i.pinimg.com/736x/2f/c1/4c/2fc14c2fb275552eefb16b7b68f102a0.jpg"
+  },
+  {
+    "id": 31,
+    "nome": "Bolo de Chocolate",
+    "descricao": "Bolo macio de chocolate com cobertura cremosa.",
+    "nota": 4.8,
+    "preco": 8.50,
+    "categoria": "Bolos",
+    "imagem": "https://i.pinimg.com/1200x/46/4c/d7/464cd7b759efa52eb7c1305caed09dcd.jpg"
+  },
+  {
+    "id": 32,
+    "nome": "Bolo de Laranja",
+    "descricao": "Bolo leve e aromático preparado com suco natural de laranja.",
+    "nota": 4.7,
+    "preco": 7.50,
+    "categoria": "Bolos",
+    "imagem": "https://i.pinimg.com/1200x/a3/a3/85/a3a3857d3f81612f45e4a511d79a47da.jpg"
+  },
+  {
+    "id": 33,
+    "nome": "Bolo de Fubá",
+    "descricao": "Bolo tradicional de fubá, macio e levemente adocicado.",
+    "nota": 4.7,
+    "preco": 7.00,
+    "categoria": "Bolos",
+    "imagem": "https://i.pinimg.com/736x/37/13/a8/3713a8c8e676bbb3c4cc5817a8b1b460.jpg"
+  },
+  {
+    "id": 34,
+    "nome": "Croissant de Manteiga",
+    "descricao": "Croissant artesanal, leve, folhado e preparado com manteiga.",
+    "nota": 4.8,
+    "preco": 9.00,
+    "categoria": "Salgados",
+    "imagem": "https://i.pinimg.com/736x/7a/0e/d3/7a0ed3f46b8c708c1c7cda862f1a47f0.jpg"
+  },
+  {
+    "id": 35,
+    "nome": "Croissant de Queijo",
+    "descricao": "Croissant folhado recheado com queijo derretido.",
+    "nota": 4.8,
+    "preco": 11.00,
+    "categoria": "Salgados",
+    "imagem": "https://i.pinimg.com/736x/ca/68/fb/ca68fb7909be4b4e59732098e6af56ed.jpg"
+  },
+  {
+    "id": 36,
+    "nome": "Pão de Queijo",
+    "descricao": "Pão de queijo quentinho, macio por dentro e levemente crocante por fora.",
+    "nota": 4.9,
+    "preco": 6.00,
+    "categoria": "Salgados",
+    "imagem": ""
+  },
+  {
+    "id": 37,
+    "nome": "Pão de Queijo Recheado",
+    "descricao": "Pão de queijo artesanal recheado com queijo cremoso.",
+    "nota": 4.9,
+    "preco": 8.00,
+    "categoria": "Salgados",
+    "imagem": "https://i.pinimg.com/736x/9e/92/9b/9e929b74f16e37f8304cacf1579cf17d.jpg"
+  },
+  {
+    "id": 38,
+    "nome": "Empada de Frango",
+    "descricao": "Empada artesanal com massa crocante e recheio cremoso de frango.",
+    "nota": 4.7,
+    "preco": 8.50,
+    "categoria": "Salgados",
+    "imagem": "https://i.pinimg.com/236x/e2/4b/d7/e24bd7ca8f4e5a0d9939e4eee1bfa384.jpg"
+  },
+  {
+    "id": 39,
+    "nome": "Empada de Palmito",
+    "descricao": "Empada artesanal recheada com palmito temperado e cremoso.",
+    "nota": 4.6,
+    "preco": 8.50,
+    "categoria": "Salgados",
+    "imagem": "https://i.pinimg.com/1200x/f0/72/b4/f072b4187157d7123e55fb52532b2b22.jpg"
+  },
+  {
+    "id": 40,
+    "nome": "Sanduíche Natural de Frango",
+    "descricao": "Sanduíche leve com frango desfiado, salada e molho especial.",
+    "nota": 4.7,
+    "preco": 13.00,
+    "categoria": "Sanduíches",
+    "imagem": "https://i.pinimg.com/1200x/c4/b1/4e/c4b14e0be58dfa19e18f91358b5d7c51.jpg"
+  },
+  {
+    "id": 41,
+    "nome": "Sanduíche de Queijo Quente",
+    "descricao": "Pão tostado recheado com queijo derretido.",
+    "nota": 4.8,
+    "preco": 10.00,
+    "categoria": "Sanduíches",
+    "imagem": "https://i.pinimg.com/1200x/cf/c1/ec/cfc1ecaef2c1a90f24c0522839b8d172.jpg"
+  },
+  {
+    "id": 42,
+    "nome": "Sanduíche Caprese",
+    "descricao": "Pão artesanal com tomate, queijo, manjericão e azeite.",
+    "nota": 4.7,
+    "preco": 14.00,
+    "categoria": "Sanduíches",
+    "imagem": "https://i.pinimg.com/736x/de/5f/a1/de5fa10c724d962d906edb8379313a13.jpg"
+  },
+  {
+    "id": 43,
+    "nome": "Torrada com Abacate",
+    "descricao": "Pão artesanal tostado com creme de abacate e temperos.",
+    "nota": 4.6,
+    "preco": 13.00,
+    "categoria": "Café da Manhã",
+    "imagem": "https://i.pinimg.com/736x/d4/66/3e/d4663ea0e44e3a45ffb058a6b5516774.jpg"
+  },
+  {
+    "id": 44,
+    "nome": "Toast de Queijo e Tomate",
+    "descricao": "Pão tostado com queijo derretido, tomate fresco e ervas.",
+    "nota": 4.7,
+    "preco": 11.50,
+    "categoria": "Café da Manhã",
+    "imagem": "https://i.pinimg.com/1200x/af/f5/a2/aff5a227eb65a843e75d6ad75bcecc12.jpg"
+  },
+  {
+    "id": 45,
+    "nome": "Iogurte com Granola",
+    "descricao": "Iogurte cremoso servido com granola crocante e frutas frescas.",
+    "nota": 4.7,
+    "preco": 12.00,
+    "categoria": "Café da Manhã",
+    "imagem": "https://i.pinimg.com/736x/9e/4d/93/9e4d93f8ff5f0a8543a78253a89967d4.jpg"
+  },
+  {
+    "id": 46,
+    "nome": "Açaí com Granola",
+    "descricao": "Açaí cremoso servido com granola e frutas frescas.",
+    "nota": 4.8,
+    "preco": 15.00,
+    "categoria": "Bebidas Geladas",
+    "imagem": "https://i.pinimg.com/1200x/d4/03/6f/d4036f811a9d8d06803da3df945aaeec.jpg"
+  },
+  {
+    "id": 47,
+    "nome": "Suco de Laranja",
+    "descricao": "Suco natural de laranja preparado na hora.",
+    "nota": 4.7,
+    "preco": 8.00,
+    "categoria": "Bebidas",
+    "imagem": "https://i.pinimg.com/1200x/2f/ce/05/2fce054dc77697bbc790197ed8c71bbf.jpg"
+  },
+  {
+    "id": 48,
+    "nome": "Suco de Morango",
+    "descricao": "Suco refrescante preparado com morangos frescos.",
+    "nota": 4.6,
+    "preco": 9.00,
+    "categoria": "Bebidas",
+    "imagem": ""
+  },
+  {
+    "id": 49,
+    "nome": "Limonada Suíça",
+    "descricao": "Bebida refrescante preparada com limão, leite condensado e gelo.",
+    "nota": 4.8,
+    "preco": 9.50,
+    "categoria": "Bebidas",
+    "imagem": "https://i.pinimg.com/736x/52/65/e1/5265e130fa72eeef4545e0017a7b05fb.jpg"
+  },
+  {
+    "id": 50,
+    "nome": "Milkshake de Chocolate",
+    "descricao": "Milkshake cremoso de chocolate servido bem gelado.",
+    "nota": 4.9,
+    "preco": 15.00,
+    "categoria": "Bebidas Geladas",
+    "imagem": "https://i.pinimg.com/1200x/cb/3f/a4/cb3fa432e2ee53db50ed9b36e8d2340e.jpg"
+  }
+]

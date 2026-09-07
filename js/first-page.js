@@ -44,6 +44,85 @@ function HorarioCafeteria() {
 
 HorarioCafeteria();
 
+// Colocar imagem nos seus lugares
+
+async function Imagem() {
+    let imagens = await fetch("src/infor.json")
+    let resultadoImagens = await imagens.json()
+
+    for (let contador = 0; contador < resultadoImagens.length; contador++) {
+        let id = resultadoImagens[contador].id
+        let nome = resultadoImagens[contador].nome
+        let descricao = resultadoImagens[contador].descricao
+        let preco = resultadoImagens[contador].preco
+        let nota = resultadoImagens[contador].nota
+        let categoria = resultadoImagens[contador].categoria
+        let imagem = resultadoImagens[contador].imagem
+
+        imagensDestaquens(resultadoImagens, id, nome, descricao, preco, nota, categoria, imagem)
+    carroselimagens(resultadoImagens)
+    }
+
+
+
+}
+
+Imagem()
+
+
+let imagemDestaque = document.querySelectorAll(".imagemDestaque")
+let precoDestaque = document.querySelectorAll(".precoDestaque")
+let nomeProdutoDestaque = document.querySelectorAll(".NomeProdutoDestaque")
+
+
+// estudar essa funcao e entender [...resultadoImagens]
+//  sort e slice
+function imagensDestaquens(resultadoImagens, id, nome, descricao, preco, nota, categoria, imagem) {
+
+    let destaques = [...resultadoImagens]
+
+
+    destaques.sort((notalPassada, notaAtual) => notalPassada.nota - notaAtual.nota)
+
+    let cincoDestaques = destaques.slice(0, 5)
+
+    cincoDestaques.forEach((Produto, contador) => {
+        imagemDestaque[contador].src = Produto.imagem
+
+        precoDestaque[contador].textContent = `R$ ${Produto.preco}`
+
+        nomeProdutoDestaque[contador].textContent = Produto.nome
+    })
+
+   
+}
+
+// Imagem carrossel
+
+let imagensCarrossel = document.querySelectorAll(".carrosselImagem")
+let nomesCarrossel = document.querySelectorAll(".carrosselNome")
+let precosCarrossel = document.querySelectorAll(".carrosselPreco")
+function carroselimagens(resultadoImagens){
+    
+        let produtos = [...resultadoImagens]
+
+    produtos.sort(() => Math.random() - 0.5)
+
+    produtos.forEach((produto, contador) => {
+
+        if (contador >= imagensCarrossel.length) {
+            return
+        }
+
+        imagensCarrossel[contador].src = produto.imagem
+        imagensCarrossel[contador].alt = produto.nome
+
+        nomesCarrossel[contador].textContent = produto.nome
+
+        precosCarrossel[contador].textContent = `R$ ${produto.preco}`
+    })
+
+}
 
 ///////////////////////////////////////////////////////////////////////
 
@@ -117,7 +196,7 @@ function FormularioParaWhatsapp() {
     let number = document.querySelector("#number").value;
     let motivo = document.querySelector("#motivo").value;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const telefoneRegex = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+    const telefoneRegex = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
     if (
         name === "" | email === "" | number === "" | motivo === "") {
 
@@ -128,9 +207,9 @@ const telefoneRegex = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
             return;
         }
 
-else if (!telefoneRegex.test(number)) {
-    return;
-}
+        else if (!telefoneRegex.test(number)) {
+            return;
+        }
     }
 
     let Myphone = "+557781199685";

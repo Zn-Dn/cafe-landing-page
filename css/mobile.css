@@ -777,16 +777,17 @@ label {
 
     }
 
+   
+
     .ContainerProdutos {
         width: 100%;
         display: flex;
         justify-content: space-around;
-        gap: 10px;
 
         article {
             border: 2px solid var(--cor-texto-secundario);
             border-radius: 10px;
-
+width: auto;
 
 
             .produto_avaliacao i {
