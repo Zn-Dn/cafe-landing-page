@@ -20,24 +20,24 @@ function HorarioCafeteria() {
 
         const agora = new Date();
         const hora = agora.getHours();
-const hoje = new Date()
+        const hoje = new Date()
 
-if (hoje.getDay() === 0) {
+        if (hoje.getDay() === 0) {
 
-    hrDeFuncionamento.style.backgroundColor = "#A34F45";
-    hrDeFuncionamento.textContent = "Fechado";
+            hrDeFuncionamento.style.backgroundColor = "#A34F45";
+            hrDeFuncionamento.textContent = "Fechado";
 
-} else if (hora >= 11 && hora < 16) {
+        } else if (hora >= 11 && hora < 16) {
 
-    hrDeFuncionamento.style.backgroundColor = "#667052";
-    hrDeFuncionamento.textContent = "Aberto";
+            hrDeFuncionamento.style.backgroundColor = "#667052";
+            hrDeFuncionamento.textContent = "Aberto";
 
-} else {
+        } else {
 
-    hrDeFuncionamento.style.backgroundColor = "#A34F45";
-    hrDeFuncionamento.textContent = "Fechado";
+            hrDeFuncionamento.style.backgroundColor = "#A34F45";
+            hrDeFuncionamento.textContent = "Fechado";
 
-}
+        }
 
     }, 3000);
 }
@@ -52,7 +52,7 @@ const iconePolegar = document.querySelectorAll('.produto_avaliacao i');
 
 iconePolegar.forEach(icone => {
     icone.addEventListener('click', () => {
-        icone.classList.toggle('ativo'); 
+        icone.classList.toggle('ativo');
     });
 });
 
@@ -105,12 +105,7 @@ esquerda.addEventListener("click", () => {
 //////////////////////////////////////
 // mostra descricao completa
 
-const mais = document.querySelector(".mais")
-const ButtonMostraMais = document.querySelector(".descricao button")
 
-ButtonMostraMais.addEventListener("click",()=>{
-    mais.classList.toggle("mostratexto")
-})
 
 
 
@@ -121,6 +116,22 @@ function FormularioParaWhatsapp() {
     let email = document.querySelector("#email").value;
     let number = document.querySelector("#number").value;
     let motivo = document.querySelector("#motivo").value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const telefoneRegex = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+    if (
+        name === "" | email === "" | number === "" | motivo === "") {
+
+        return
+    }
+    else {
+        if (!emailRegex.test(email)) {
+            return;
+        }
+
+else if (!telefoneRegex.test(number)) {
+    return;
+}
+    }
 
     let Myphone = "+557781199685";
 

@@ -95,21 +95,42 @@
     gap: 10px;
 }
 
-.infor-header p {
+.infor-header p,a {
     color: #fff;
 }
 
 .exploreEndHours {
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 .exploreEndHours button,
-.Horario-de-fucionamento {
+.Horario-de-fucionamento,.SobreNos {
     padding: 5px;
     border-radius: 5px;
-}
+border-radius: 10px;
+        width: 100%;
+        max-width: 200px;
 
+        text-align: center;}
+
+        .explore{
+            display: none;
+        }
+ .SobreNos {
+
+        border: 2px solid var(--cor-texto-secundario);
+       
+        transition: .5s;
+
+        &:hover {
+            background-color: #c0bfbf7c;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
 
 
 
@@ -195,8 +216,9 @@
             padding: 5px;
             border-radius: 5px;
             border: none;
+            color: var(--cor-texto);
+              border: 2px solid var(--cor-texto);
             background-color: #2d5a27;
-            color: #fff;
             font-weight: 600;
             transition: 1s;
 
@@ -207,6 +229,20 @@
             }
         }
     }
+}
+
+.Produtos h2{
+       display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Produtos h2::before,
+.Produtos h2::after {
+    content: "";
+    height: 1px;
+    background: var(--cor-texto);
+    flex: 1;
 }
 
 
@@ -267,7 +303,6 @@
 
 
         .produto_compra {
-
             display: flex;
             gap: 5px;
             align-items: flex-start;
@@ -294,9 +329,6 @@
     }
 
 }
-
-
-
 
 
 .sobre {
@@ -326,16 +358,6 @@
 
     p {
         color: var(--cor-texto);
-    }
-
-    .mais {
-        display: none;
-
-
-    }
-
-    .mais.mostratexto {
-        display: block
     }
 
     button {
@@ -373,12 +395,12 @@
     height: 100%;
     background: rgba(29, 29, 29, 0.614);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  
 
     z-index: -1;
 }
 
-.agendamento>h2 {
+.agendamento h2 {
     text-align: center;
     margin-bottom: 50px;
     color: var(--cor-texto);
@@ -388,9 +410,7 @@
 
 
 .divContainer {
-    max-width: 1100px;
-    margin: 0 auto;
-
+    width: 100%;
 
 }
 
@@ -399,27 +419,19 @@
     margin-bottom: 40px;
 }
 
-.frase {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
+
 
 .frase p {
     font-size: 1rem;
 }
 
 
-.containerInfor {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-}
 
 
-.formulario {
-    flex: 1;
+.formulario{
+    width: 100%;
 }
+
 
 .campo {
     margin-bottom: 20px;
@@ -427,6 +439,7 @@
 
 .campo label,
 .formulario>label {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -434,10 +447,9 @@
 }
 
 
-.campoInput,
-.campo input,
-.formulario>label input {
-    width: 300px;
+
+.campo input {
+    width: 100%;
     min-width: 200px;
     padding: 12px;
     border: 1px solid #ccc;
@@ -468,7 +480,7 @@ input {
 .mensagem::before {
     position: absolute;
     content: "";
-    width: 300px;
+    width: 100%;
     height: 2px;
     background-color: #fff;
     bottom: 0px;
@@ -492,8 +504,9 @@ label {
 }
 
 
-.containerInfor img {
+.containerInfor iframe {
     display: none;
+   
 }
 
 
@@ -506,6 +519,19 @@ label {
     padding: 20px;
     gap: 10px;
 
+    .btnFooter h3 {
+    color: var(--cor-destaque);
+&:hover {
+    color: var(--cor-destaque-hover);
+    cursor: pointer;
+}}
+
+.btnFooter h3 {
+    color: var(--cor-destaque);
+&:hover {
+    color: var(--cor-destaque-hover);
+    cursor: pointer;
+}}
     .nameCafe {
         font-size: 2rem;
         margin-bottom: 20px;
@@ -515,14 +541,8 @@ label {
 
 }
 
-.btnFooter h3 {
-    color: var(--cor-destaque);
-}
 
-h3:hover {
-    color: var(--cor-destaque-hover);
-    cursor: pointer;
-}
+
 
 .btnFooter {
     display: flex;
@@ -546,16 +566,29 @@ h3:hover {
 }
 
 
-
-.copyright {
-    text-align: center;
+.Foonter-info{
     position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+    .copyright {
+    text-align: center;
     color: #fff;
     padding-top: 20px;
 
 }
+.privacidadeEtermos{
+    text-align: center;
+   
 
-.copyright::before {
+    a{
+        text-decoration: none;
+    }
+}
+}
+
+
+.Foonter-info::before {
     content: "";
     position: absolute;
     top: 10px;
@@ -606,7 +639,7 @@ h3:hover {
 @media (min-width: 769px) {
 
     #inicio {
-        padding: 0px;
+        padding-top: 70px;
         background-image: url("/img/header/imagem-header.jfif");
         background-size: cover;
         background-position: center;
@@ -614,6 +647,7 @@ h3:hover {
     }
 
     #inicio nav .nav-links {
+        
         background-image: none;
         background-color: transparent;
 
@@ -622,10 +656,14 @@ h3:hover {
 
         width: auto;
         height: auto;
-        padding: 0;
+       
     }
 
     #inicio nav {
+        position: fixed;
+        z-index: 100;
+       top: 0;
+       left: 0;
         background-color: var(--cor-fundo);
         padding: 10px;
         width: 100%;
@@ -706,6 +744,10 @@ h3:hover {
         margin-top: 20px;
     }
 
+    .explore{
+        display: block;
+    }
+
     .explore,
     .Horario-de-fucionamento,
     .SobreNos {
@@ -715,19 +757,7 @@ h3:hover {
         text-align: center;
     }
 
-    .SobreNos {
-
-        border: 2px solid var(--cor-texto-secundario);
-        padding: 5px;
-
-        transition: .5s;
-
-        &:hover {
-            background-color: #c0bfbf7c;
-            cursor: pointer;
-        }
-    }
-
+   
 
     /* Destaques da semana */
     .Produtos {
@@ -781,28 +811,22 @@ h3:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #fff;
+       
         border-radius: 10px;
         padding: 5px;
 
-.produto_preco{
+ 
 
-        color: black;
     }
+
+    .produto_conteudo .produto_compra .produto_preco {
+        color: var(--cor-texto);
+        font-weight: 700;
+        font-size: 1.3rem;
+      
     }
 
     
-
-    button {
-        padding: 5px;
-        border-radius: 5px;
-        border: none;
-
-
-        font-weight: 600;
-        transition: 1s;
-
-    }
 
     /* Carrossel animando */
     .CarrosselProdutos {
@@ -864,19 +888,13 @@ h3:hover {
 
 
             .produto_compra {
-                background-color: #fff;
+                
                 display: flex;
                 flex-direction: row;
                 padding: 5px;
                 border-radius: 10px;
                 align-items: center;
 
-
-                .produto_preco {
-                    color: black;
-                    font-weight: 2rem;
-                    font-size: 1.3rem;
-                }
             }
         }
 
@@ -900,25 +918,31 @@ h3:hover {
         align-items: center;
         padding: 20px;
         min-height: 100vh;
-    }
-
-    .imagem img {
+ .imagem img {
         display: block;
         border-radius: 10px;
         height: 600px;
+
+
+
     }
 
 
     .descricao {
         background-color: var(--cor-verde);
         height: 400px;
+        width: 100%;
+       
         border-radius: 0 10px 10px 0;
         padding: 10px;
         display: flex;
         gap: 10px;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
-    }
+    }   }
+
+   
 
     .descricao h2 {
         text-align: center;
@@ -932,23 +956,8 @@ h3:hover {
         color: var(--cor-texto);
     }
 
-    .mais {
-        display: none;
+    
 
-
-    }
-
-    .mais.mostratexto {
-        display: block
-    }
-
-    button {
-        border: none;
-        background-color: var(--cor-verde);
-        color: #fff;
-        font-size: 1rem;
-
-    }
 
 
 
@@ -993,7 +1002,7 @@ h3:hover {
 
 
     .divContainer {
-        max-width: 1100px;
+        width: 100%;
         margin: 0 auto;
 
 
@@ -1022,16 +1031,13 @@ h3:hover {
     }
 
 
-    .formulario {
-        flex: 1;
-    }
 
-    .campo {
-        margin-bottom: 20px;
-    }
+
+   
 
     .campo label,
     .formulario>label {
+          width: 100%;
         display: flex;
         flex-direction: column;
         gap: 8px;
@@ -1039,17 +1045,16 @@ h3:hover {
     }
 
 
-    .campoInput,
-    .campo input,
-    .formulario>label input {
-        width: 100%;
-        min-width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        box-sizing: border-box;
-        font-size: 1rem;
-    }
+  
+    .campo input {
+    width: 100%;
+    
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
 
     input {
         background-color: transparent;
@@ -1057,18 +1062,91 @@ h3:hover {
 
     }
 
-
-
-
-
-
-
-
-
-
-    .containerInfor img {
+    .containerInfor iframe {
+        border-radius: 10px;
         display: block;
     }
 
 
+.mais-Detalhes {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr 1fr;
+    grid-template-rows:auto auto auto;
+    padding: 20px;
+    gap: 10px;
+
+   
+.btnFooter h3 {
+    color: var(--cor-destaque);
+&:hover {
+    color: var(--cor-destaque-hover);
+    cursor: pointer;
+}}
+
+
+}
+
+
+
+
+
+
+
+.opcoesFooter {
+    display: flex;
+    flex-direction: column;
+gap: 10px;
+
+}
+
+
+.Foonter-info{
+     grid-column: 1/5;
+     display: flex;
+     flex-direction: column;
+   /* .copyright {
+   
+   
+}
+
+.privacidadeEtermos{
+     */
+/* } */
+}
+
+
+
+.redes{
+     grid-column: 1/5;
+}
+
+.redes ul {
+   
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+
+    li a {
+        color: var(--cor-destaque);
+
+        i {
+            transition: .4s;
+            font-size: 1.5rem;
+        }
+
+        i:hover {
+            color: var(--cor-destaque-hover);
+            transform: scale(1.05);
+        }
+    }
+
+}
+
+
+
+.opcoesFooter.mostra {
+    display: block;
+}
 }
